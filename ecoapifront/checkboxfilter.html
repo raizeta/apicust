@@ -1,0 +1,41 @@
+<html ng-app='angularDemo'>
+<head>
+  <link href="css.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="myappmodule.js"></script>
+  <script src="application/services/productservices.js"></script>
+  <script src="application/controller/productcontroller.js"></script>
+  <script src="application/filter/checkboxfilter.js"></script>
+</head>
+<body>
+<div  class="ng-cloak" ng-cloak="">
+  <div ng-controller="angularController as ctrl">
+    <h2>Filtering with Angular Filters</h2>
+    <div class="sidebar">
+      <div ng-repeat="filter in Filters">
+        <h3 class="sort">{{filter.name}}</h3>
+        <ul class="sortoptions">
+          <li ng-repeat="option in filter.options">
+            <input type="checkbox" ng-model="option.IsIncluded" ng-checked="option.IsIncluded"> {{option.value}}
+            <span>({{option.count}})</span>
+          </li>
+        </ul>
+      </div>
+      <button ng-click="ctrl.toggleAll($event, false)">Uncheck All</button>
+      <button ng-click="ctrl.toggleAll($event, true)">Check All</button>
+    </div>
+
+    <div class="productlist">
+      <div ng-repeat="fruit in Fruits | dynamicFilter:Filters:this" class="product">
+        {{fruit.name}} 
+        {{fruit.properties[0].value}} 
+        {{fruit.properties[1].value}}
+        {{fruit.properties[2].value}}
+        {{fruit.properties[3].value}}
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
