@@ -1,0 +1,33 @@
+<div class="box">
+<div class="box-header with-border">
+    <div class="box-header pull-left">
+      <h3 class="box-title">New Product</h3>
+    </div><!-- /.box-header -->
+</div><!-- /.box-header -->
+<form name="productform" ng-submit="submitForm(productbaru)" role="form" novalidate>
+  <div class="box-body">
+    <div class="form-group" ng-class="{ 'has-error' : productform.size.$invalid && !productform.size.$pristine,'has-success':productform.size.$valid  }">
+      <label >Size</label>
+    <select class="form-control" name="size" ui-select2="select2Options" ng-controller="SizeController" ng-model="size" required>
+      <option value=""></option>
+      <option ng-repeat="size in sizelists" value="{{size.id}}">
+        {{size.size}}
+      </option>
+    </select>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : productform.color.$invalid && !productform.color.$pristine,'has-success':productform.color.$valid  }">
+      <label >Color</label>
+		<select class="form-control" name="color" ui-select2="select2Options" multiple ng-controller="ColorController" ng-model="color" required>
+<!-- 			<option value=""></option> -->
+			<option ng-repeat="color in colorlists" value="{{color.id}}">
+				{{color.color}}
+			</option>
+		</select>
+    </div>
+    
+  </div><!-- /.box-body -->
+  <div class="box-footer">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div><!-- /.box -->

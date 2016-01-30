@@ -1,0 +1,37 @@
+
+  <div>
+    <h2>Filtering with Angular Filters</h2>
+    <div class="sidebar">
+      <div ng-repeat="filter in Filters">
+        <h3 class="sort">{{filter.name}}</h3>
+        <ul class="sortoptions">
+          <li ng-repeat="option in filter.options">
+            <input type="checkbox" ng-model="option.IsIncluded" ng-checked="option.IsIncluded"> {{option.value}}
+            <span>({{option.count}})</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="productlist">
+      <div ng-repeat="fruit in Fruits | dynamicFilter:adasaja:this" class="product">
+        {{fruit.name}} 
+        {{fruit.properties[0].value}} 
+        {{fruit.properties[1].value}}
+        {{fruit.properties[2].value}}
+        {{fruit.properties[3].value}}
+      </div>
+    </div> -->
+
+    <div class="productlist">
+      <div ng-repeat="fruit in Fruits | dynamicFilter:Filters:this" class="product">
+        {{fruit.name}}
+        <ul> 
+          <li ng-repeat="item in fruit.properties">
+            {{item.value}}
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </div>
+

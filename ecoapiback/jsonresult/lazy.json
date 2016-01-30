@@ -1,0 +1,40 @@
+{"lazy":
+	[
+		{
+			"id":1,
+			"nama":"Polo Satu",
+			"harga":12000,
+			"variant":
+			[
+				{
+					"size":"small",
+					"color":"blue",
+					"price":17000
+				},
+				{
+					"size":"small",
+					"color":"red"
+					"price":15000
+				}
+			]
+		},
+		{
+			"id":2,
+			"nama":"Product Dua",
+			"harga":17000,
+			"variant":
+			[
+				{
+					"size":"small",
+					"color":"blue",
+					"price":25000
+				},
+				{
+					"size":"small",
+					"color":"red"
+					"price":34000
+				}
+			]
+		}
+	]
+}

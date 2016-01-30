@@ -1,0 +1,43 @@
+{"brandlist":
+[
+	{
+		"id":1,
+		"address":"De Mansion",
+		"zip":15330,
+		"telp":"081260014478",
+		"email":"polo@gmail.com",
+		"brandName":"Polo",
+		"slug":"polo",
+		"createAt":
+			{
+				"date":"2015-12-31 00:00:00.000000",
+				"timezone_type":3,
+				"timezone":"Europe\/Berlin"
+			},
+			"updateAt":
+			{
+				"date":"2015-12-31 00:00:00.000000",
+				"timezone_type":3,"timezone":"Europe\/Berlin"
+			}
+	},
+	{
+		"id":2,
+		"address":"Medan",
+		"zip":15330,
+		"telp":"081260014478",
+		"email":"nike@gmail.com",
+		"brandName":"NIKE",
+		"slug":"nike",
+		"createAt":
+		{
+			"date":"2016-01-02 00:00:00.000000",
+			"timezone_type":3,
+			"timezone":"Europe\/Berlin"
+		},
+		"updateAt":
+		{
+			"date":"2016-01-02 00:00:00.000000",
+			"timezone_type":3,"timezone":"Europe\/Berlin"
+		}
+	}
+]};

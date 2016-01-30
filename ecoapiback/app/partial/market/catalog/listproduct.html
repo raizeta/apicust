@@ -1,0 +1,53 @@
+<div class="row">
+	<div class="col-md-9">
+	  <div class="box">
+	    <div class="box-header with-border">
+	  	    <div class="box-header pull-right">
+  	    		<a class="btn btn-success" href="#/catalog/newproduct/information">
+		      		<i class="fa fa-plus"></i>&nbsp; Create New Product
+	      		</a>
+		    </div><!-- /.box-header -->
+		    <div class="box-header pull-left">
+		      <h3 class="box-title">Product Table</h3>
+		    </div><!-- /.box-header -->
+	    </div><!-- /.box-header -->
+
+	    <div class="box-body table-responsive">
+	      <table class="table table-bordered">
+	        <tbody><tr>
+	          <th style="width: 10px">#</th>
+	          <th>Nama Product</th>
+	          <th>Progress</th>
+	          <th>Brand</th>
+	          <th></th>
+	        </tr>
+	        <tr ng-repeat="item in productlists">
+	          	<td>{{item.id}}</td>
+			  	<td>{{item.namaproduct}}</td>
+			  	<td>{{item.productCategory}}</td>
+			  	<td>{{item.productBrand}}</td>
+			  	<td>{{item.variantsize}}</td>
+			  	<td>{{item.variantcolor}}</td>
+			  	<td>{{item.variantprice}}</td>  
+	          	<td>
+	          		<ngcart-addtocart id="{{ item.variantid }}" name="{{ item.namaproduct }}" 
+	          			price="{{ item.variantprice }}" quantity="1" quantity-max="30" data="item">
+	          			Add to Cart
+	          		</ngcart-addtocart>
+	          </td>
+	        </tr>
+	        </tr>
+	      </tbody></table>
+	    </div><!-- /.box-body -->
+	    <div class="box-footer clearfix">
+	      <ul class="pagination pagination-sm no-margin pull-right">
+	        <li><a href="#">«</a></li>
+	        <li><a href="#">1</a></li>
+	        <li><a href="#">2</a></li>
+	        <li><a href="#">3</a></li>
+	        <li><a href="#">»</a></li>
+	      </ul>
+	    </div>
+	  </div><!-- /.box -->
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<table border="1" cellspacing="1" cellpadding="0">
+	<tr ng-repeat="produk in produklists">{{produk.namaproduk}}
+			<td>{{produk.namaproduk}}</td>
+			<td>{{produk.productCategory}}</td>
+			<td>{{produk.brand}}</td>
+			<td>
+				<table >
+					<tr ng-repeat="variant in produk.varian">
+						<td>{{variant.variantsize}}</td>
+						<td>{{variant.variantcolor}}</td>
+						<td>{{variant.variantprice}}<td>
+					</tr>
+				</table>
+			</td>
+	</tr>
+</table>

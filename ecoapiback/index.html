@@ -1,0 +1,77 @@
+<html ng-app="myAppModule">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title ng-bind="$state.current.name + ' - ui-router'">ui-router</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="adminlte/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="adminlte/bootstrap/font-awesome/css/font-awesome.css">
+	<link href="assets/style.css" rel="stylesheet">
+    <link href="assets/offcanvas.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="bower_components/select2/select2.css">
+    <link rel="stylesheet" href="bower_components/select2/select2-bootstrap.css">
+    <link rel="bower_components/angular-loading-bar/src/loading-bar.css">
+
+    <link rel="stylesheet" href="adminlte/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="adminlte/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="adminlte/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<!-- <link href="text/javascript" src="bower_components/angular-ivh-treeview/dist/ivh-treeview.css">
+<link href="text/javascript" src="bower_components/angular-ivh-treeview/dist/ivh-treeview-theme-basic.css"> -->
+
+
+
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini" off-canvas-menu ng-class="{'sidebar-collapse sidebar-open': isMenuOpen}">
+	<div ui-view></div>
+    
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- // <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> -->
+    <script src="adminlte/bootstrap/js/bootstrap.min.js"></script>
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-animate.min.js"></script>
+    <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="bower_components/select2/select2.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-select2/src/select2.js"></script>
+    <script type="text/javascript" src="bower_components/angular-base64-upload/dist/angular-base64-upload.js">
+    </script>
+    <script type="text/javascript" src="bower_components/angular-ivh-treeview/dist/ivh-treeview.js"></script>
+    <script type="text/javascript" src="bower_components/ngCart/dist/ngCart.js"></script>
+    <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+    <script src="adminlte/plugins/fastclick/fastclick.min.js"></script>
+    <script src="adminlte/dist/js/app.min.js"></script>
+
+	<script src="app/myAppModule.js"></script>
+	<script src="app/services/catalogservices.js"></script>
+    
+    <!-- File Yang Dibutuhkan Untuk Checkbox Filter -->
+    <script src="app/services/productservices.js"></script>
+    <script src="app/filter/checkbox.js"></script>
+    <script src="app/controller/market/productcontroller.js"></script>
+    <script src="app/routing/market/filterrouting.js"></script>
+    <!-- File Yang Dibutuhkan Untuk Checkbox Filter -->
+
+	<script src="app/routing/market/catalogrouting.js"></script>
+    <script src="app/routing/market/newproductrouting.js"></script>
+    <script src="app/controller/market/catalogcontroller.js"></script>
+
+
+    <script src="app/services/orderservices.js"></script>
+    <script src="app/routing/market/orderrouting.js"></script>
+    <script src="app/controller/market/ordercontroller.js"></script>
+
+    <script src="app/services/jsonservices.js"></script>
+    <script src="app/routing/json/jsonrouting.js"></script>
+    <script src="app/controller/json/jsoncontroller.js"></script>
+	
+	<script src="app/directives/offcanvas.js"></script>
+    <script src="app/directives/autoformat.js"></script>
+
+    
+</body>
+</html>

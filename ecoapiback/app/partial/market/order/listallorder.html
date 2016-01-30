@@ -1,0 +1,51 @@
+<div class="row">
+	<div class="col-md-12">
+	  <div class="box">
+	    <div class="box-header with-border">
+	  	    <div class="box-header pull-right">
+  	    		<a class="btn btn-success">
+		      		<i class="fa fa-plus"></i>&nbsp; Create New Product
+	      		</a>
+		    </div><!-- /.box-header -->
+		    <div class="box-header pull-left">
+		      <h3 class="box-title">Product Table</h3>
+		    </div><!-- /.box-header -->
+	    </div><!-- /.box-header -->
+
+	    <div class="box-body table-responsive">
+	      <table class="table table-bordered">
+	        <tbody><tr>
+	          <th style="width: 10px">#</th>
+	          <th>Customer</th>
+	          <th>Email</th>
+	          <th>Order Date</th>
+	          <th>Total</th>
+	          <th>Trans To</th>
+	          <th>Status</th>
+	          <th>Progress</th>
+	        </tr>
+	        <tr ng-repeat="order in orderlists">
+	          <td>{{order.id}}</td>
+	          <td>{{order.customer}}</td>
+	          <td>{{order.emailcust}}</td>
+	          <td>{{order.orderat.date}}</td>
+	          <td>{{order.total|number}}</td>
+	          <td>{{order.transferto}}</td>
+	          <td>{{order.status}}</td>
+	          <td><span class="badge bg-red">55%</span></td>
+	        </tr>
+	        </tr>
+	      </tbody></table>
+	    </div><!-- /.box-body -->
+	    <div class="box-footer clearfix">
+	      <ul class="pagination pagination-sm no-margin pull-right">
+	        <li><a href="#">«</a></li>
+	        <li><a href="#">1</a></li>
+	        <li><a href="#">2</a></li>
+	        <li><a href="#">3</a></li>
+	        <li><a href="#">»</a></li>
+	      </ul>
+	    </div>
+	  </div><!-- /.box -->
+	</div>
+</div>
